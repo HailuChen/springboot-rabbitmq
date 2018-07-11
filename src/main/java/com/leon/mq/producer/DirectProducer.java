@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
 
 /**
  * @author chenhailu
@@ -26,7 +25,7 @@ public class DirectProducer {
     @Value("${spring.rabbitmq.queue.direct}")
     private String directQueue;
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "0 0 6/2 * * ?")
     public void send() {
         String ask = "direct : Hi ! what time ?   ";
         LOGGER.info("<<<<<<<<<<< direct send" + ask);

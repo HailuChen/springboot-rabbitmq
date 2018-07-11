@@ -25,8 +25,6 @@ public class MqTestApplication extends SpringBootServletInitializer {
         return application.sources(MqTestApplication.class);
     }
 
-
-
     public static void main(String[] args) {
         SpringApplication.run(MqTestApplication.class, args);
     }
